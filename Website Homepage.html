@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html lang="en-US">
+<head>
+ <link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Portfolio</title>
+  <link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+ </style>
+<script>
+$(document).ready(function() {
+var x = "x"
+var o = "o"
+var count = 0;
+var o_win = 0;
+var x_win = 0;
+$('#game li').click(function(){
+
+  if ($("#one").hasClass('o') && $("#two").hasClass('o') && $("#three").hasClass('o') || $("#four").hasClass('o') && $("#five").hasClass('o') && $("#six").hasClass('o') || $("#seven").hasClass('o') && $("#eight").hasClass('o') && $("#nine").hasClass('o') || $("#one").hasClass('o') && $("#four").hasClass('o') && $("#seven").hasClass('o') || $("#two").hasClass('o') && $("#five").hasClass('o') && $("#eight").hasClass('o') || $("#three").hasClass('o') && $("#six").hasClass('o') && $("#nine").hasClass('o') || $("#one").hasClass('o') && $("#five").hasClass('o') && $("#nine").hasClass('o') || $("#three").hasClass('o') && $("#five").hasClass('o') && $("#seven").hasClass('o'))
+   {
+	 alert('O has won the game. Start a new game')
+	 $("#game li").text("+");
+	$("#game li").removeClass('disable')
+	$("#game li").removeClass('o')
+	$("#game li").removeClass('x')
+	$("#game li").removeClass('btn-primary')
+	$("#game li").removeClass('btn-info')
+   }
+</script>
+</head>
+<body>
+<div class="container"> 
+  <header> <a href="">
+    <h4 class="logo">&nbsp;</h4>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#hero">HOME</a></li>
+        <li>RESUME </li>
+		<a href="Aboutme_page.html">ABOUT ME</a>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero" id="hero">
+    <h2 class="hero_header">NICK <span class="light">CIFARELLI</span></h2>
+    <p class="tagline">Your Premier cyber security analyst</p>
+  </section>
+  <footer>
+    <article class="footer_column"><img src="images/lockncode.png" alt="" width="400" height="200" class="cards"/>
+      <p>My managed security monitoring service protects your website and network from hackers. The Security Operations Centre is staffed by experts with extensive experience of managing all types of cyber security incidents, from lost laptops, to compromises with a potentially national impact.</p>
+    </article>
+    <article class="footer_column"><img src="images/eyecodee.png" alt="" width="400" height="200" class="cards"/>
+      <p>Software can make or break your company. Almost all significant compromises begin with a person being tricked. I can ensure this doesn't happen to you by testing both your technology and your staff, and helping you learn from the results. I value your security</p>
+    </article>
+  </footer>
+<section class="footer_banner" id="contact">
+    <h1>&quot;It has become appallingly obvious that our technology has exceeded our humanity.&quot; - <em>Albert Einstein</em></h1>
+  </section>
+
+  <div class="copyright">2017</div>
+<div id="tic-tac-toe">
+<div class="span3 new_span">
+<div class="row">
+<h1 class="span3">Tic Tac Toe</h1>
+<div class="span3">
+<div class="input-prepend input-append">
+    <span class="add-on win_text">O won</span><strong id="o_win" class="win_times add-on">0</strong><span class="add-on">time(s)</span>
+    </div>
+    <div class="input-prepend input-append">
+    <span class="add-on win_text">X won</span><strong id="x_win" class="win_times add-on">0</strong><span class="add-on">time(s)</span>
+    </div>
+      
+</div>
+// Tic Tac Toe Game
+<ul class="row" id="game">
+<li id="one" class="btn span1" >+</li>
+<li id="two" class="btn span1">+</li>
+<li id="three" class="btn span1">+</li>
+<li id="four" class="btn span1">+</li>
+<li id="five" class="btn span1">+</li>
+<li id="six" class="btn span1">+</li>
+<li id="seven" class="btn span1">+</li>
+<li id="eight" class="btn span1">+</li>
+<li id="nine" class="btn span1">+</li>
+</ul>
+<div class="clr">&nbsp;</div>
+<div class="row"><a href="#" id="reset" class="btn-success btn span3" >Restart</a></div></div>
+</div>
+</body>
+</html>

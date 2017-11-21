@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<link href="singlePageTemplate.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container"> 
+  <header> <a href="">
+    <h4 class="logo">&nbsp;</h4>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#hero">HOME</a></li>
+        <li>RESUME </li>
+		<li><a href="Aboutme_page.html">ABOUT ME</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero" id="hero">
+    <h2 class="hero_header">NICK <span class="light">CIFARELLI</span></h2>
+    <p class="tagline">Your Premier cyber security analyst</p>
+  </section>
+  <footer>
+    <article class="footer_column"><img src="pictures/codetunnel.png" alt="" width="400" height="200" class="cards"/>
+      <p>My managed security monitoring service protects your website and network from hackers. The Security Operations Centre is staffed by experts with extensive experience of managing all types of cyber security incidents, from lost laptops, to compromises with a potentially national impact.</p>
+    </article>
+    <article class="footer_column"><img src="pictures/eyecodee.png" alt="" width="400" height="200" class="cards"/>
+      <p>Software can make or break your company. Almost all significant compromises begin with a person being tricked. I can ensure this doesn't happen to you by testing both your technology and your staff, and helping you learn from the results. I value your security</p>
+    </article>
+  </footer>
+
+<p>JavaScript Applications <br/>
+<p>Temp Converter</p>
+Algorithm: <br/>
+Create variable for Fahrenheit <br/>
+Create variable for Celsius <br/>
+Input formula to convert temperature <br/>
+    <br/>
+
+Code:<br/>
+function myFunction() {<br/>
+    var x = document.getElementById("frm1");<br/>
+    
+    var fahrTemp = x.elements[0].value;<br/>
+    
+    var celTemp = (fahrTemp - 32) * .5556;<br/>
+    
+    document.getElementById("super awesome temp converter").innerHTML = "Celsius = " + celTemp;<br/>
+}
+</p>
+
+
+<form id="frm1" action="/action_page.php">
+  F temperature: <input type="text" name="fTemp" value="50"><br>
+</form> 
+<p id="super awesome temp converter"></p>
+
+<button onclick="myFunction()">Convert</button>
+<body>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("frm1");
+    
+    var fahrTemp = x.elements[0].value;
+    
+    var celTemp = (fahrTemp - 32) * .5556;
+    
+    document.getElementById("super awesome temp converter").innerHTML = "Celsius = " + celTemp;
+}
+</script>
+
+
+<br/>
+<br/>
+<p>Body Mass Index Calculator</p>
+    <p>Algorithm:<br/>
+    Input height value<br/>
+    Input weight value<br/>
+    Apply formula to find BMI<br/>
+    <br/>
+    Code:<br/>
+    function bmi(){<br/>
+height = document.getElementById("height").value;<br/>
+weight = document.getElementById("weight").value;<br/>
+bmi = weight/Math.pow(height,2);<br/>
+document.getElementById("result").innerHTML = bmi;<br/>
+}<br/>
+<br/>
+    </p>
+<form>
+Height(in): <input type="text" id="height" /><br>
+Weight(lb): <input type="text" id="weight" /><br>
+<input type="button" onClick="bmi()" Value="Calculate" />
+</form>
+<p>Your BMI is : <br>
+<span id = "result"></span>
+</p>
+
+<script>
+function bmi(){
+height = document.getElementById("height").value;
+weight = document.getElementById("weight").value;
+bmi = weight/Math.pow(height,2);
+document.getElementById("result").innerHTML = bmi;
+}
+
+</script>
+
+<p>Number Genie<br/>
+<br/>
+Algorithm:<br/>
+Create variable for users guess<br/>
+Create variable for user output<br/>
+Input if/else statement if user guesses too high, too low, or correctly<br/>
+Create options to cheat and show user guesses<br/>
+Create element to generate a randomized number<br/>
+<br/>
+Code:<br/>
+function yourGuess() {<br/>
+    var guess = document.getElementById("guess").value;<br/>
+    var guesses = document.getElementById("output");<br/>
+<br/>
+    if (guess == numToGuess) {<br/>
+        guesses.value = guesses.value + "\r" + "You have guessed correctly! ("+guess+")";<br/>
+    } else if (guess > numToGuess) {<br/>
+        guesses.value = guesses.value + "\r" + "You guessing too high!("+guess+")";<br/>
+    } else {<br/>
+        guesses.value = guesses.value + "\r" + "You guessing too low!("+guess+")";<br/>
+    }<br/>
+}<br/>
+<br/>
+function showNumberToGuess() {<br/>
+<br/>
+    if (document.getElementById('cheat').checked) {<br/>
+        document.getElementById('numberToGuess').value = numToGuess;<br/>
+        document.getElementById('cheatShow').style.display = 'inline';<br/>
+    } else {<br/>
+        document.getElementById('numberToGuess').value = '';<br/>
+        document.getElementById('cheatShow').style.display = 'none';<br/>
+    }<br/>
+}<br/>
+<br/>
+function generateNumberToGuess(confirmIt) {<br/>
+    var guesses = document.getElementById("output");<br/>
+<br/>
+    if (confirmIt && !confirm('Restart game with new number?')) {<br/>
+        return;<br/>
+    }<br/>
+<br/>
+    guesses.value = '';<br/>
+    numToGuess = Math.floor(Math.random()*500);<br/>
+    guesses.value = "New number generated.\n";<br/>
+<br/>
+    document.getElementById('numberToGuess').value = '';<br/>
+    document.getElementById('cheatShow').style.display = 'none';<br/>
+}<br/>
+<br/>
+function showGuesses(){<br/>
+    var guesses = document.getElementById('guesses');<br/>
+    var btn = document.getElementById('showguesses');<br/>
+<br/>
+    if (guesses.style.display != 'block') {<br/>
+        guesses.style.display = 'block';<br/>
+        btn.value = 'Hide My Guesses';<br/>
+    } else {<br/>
+        guesses.style.display = 'none';<br/>
+        btn.value = 'Show My Guesses';<br/>
+    }<br/>
+}<br/>
+<br/>
+window.onload = function(){<br/>
+    generateNumberToGuess();<br/>
+}</p>
+    
+<fieldset>
+ <legend>Inputs</legend>
+ <label for="guess">Your Guess:</label>
+ <input type="text" id="guess" value="523" />
+ <input type="button" onclick="yourGuess()" value="submit" /><br />
+ <input type="button" id="showguesses" onclick="showGuesses()" value="Show My Guesses" />  
+ <input type="button" onclick="generateNumberToGuess(true)" value="New Game" /><br />
+ <input id="cheat" type="checkbox" value="cheat" onclick="showNumberToGuess()" />
+ <label for="cheat">Cheat</label>
+ <div id="cheatShow" style="display: none;">
+  <input id="numberToGuess" type="text" />
+  <label for="numberToGuess">Number to guess</label>
+ </div>
+</fieldset>
+<fieldset id="guesses" class="guesses">
+ <legend> Output </legend>
+ <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
+</fieldset>
+
+<section class="footer_banner" id="contact">
+    <h1>&quot;It has become appallingly obvious that our technology has exceeded our humanity.&quot; - <em>Albert Einstein</em></h1>
+  </section>
+
+  <div class="copyright">2017</div>
+</div>
+
+    
+    <script>
+function yourGuess() {
+    // You can store references to the value and the
+    // guesses textarea in local function variables.
+    var guess = document.getElementById("guess").value;
+    var guesses = document.getElementById("output");
+
+    // First, if the guess is the same, just show the answer.
+    // Append onto the textarea the result.
+    if (guess == numToGuess) {
+        guesses.value = guesses.value + "\r" + "You have guessed correctly! ("+guess+")";
+    } else if (guess > numToGuess) {
+        guesses.value = guesses.value + "\r" + "You guessing too high!("+guess+")";
+    } else {
+        guesses.value = guesses.value + "\r" + "You guessing too low!("+guess+")";
+    }
+}
+
+function showNumberToGuess() {
+    // Show the randomly generated number if the onclick event
+    // fires and the checkbox is check; otherwise, remove the
+    // number and hide using display: none;.
+    if (document.getElementById('cheat').checked) {
+        document.getElementById('numberToGuess').value = numToGuess;
+        document.getElementById('cheatShow').style.display = 'inline';
+    } else {
+        document.getElementById('numberToGuess').value = '';
+        document.getElementById('cheatShow').style.display = 'none';
+    }
+}
+
+// Randomly generate a number
+function generateNumberToGuess(confirmIt) {
+    var guesses = document.getElementById("output");
+
+    // First, confirm this is what we want if the confirmIt
+    // argument was passed.
+    if (confirmIt && !confirm('Restart game with new number?')) {
+        return;
+    }
+
+    guesses.value = '';
+    numToGuess = Math.floor(Math.random()*500);
+    guesses.value = "New number generated.\n";
+
+    // Don't forget to hide the new number.
+    document.getElementById('numberToGuess').value = '';
+    document.getElementById('cheatShow').style.display = 'none';
+}
+
+function showGuesses(){
+    var guesses = document.getElementById('guesses');
+    var btn = document.getElementById('showguesses');
+
+    if (guesses.style.display != 'block') {
+        guesses.style.display = 'block';
+        btn.value = 'Hide My Guesses';
+    } else {
+        guesses.style.display = 'none';
+        btn.value = 'Show My Guesses';
+    }
+}
+
+window.onload = function(){
+    generateNumberToGuess();
+}
+</script>
+</body>
+</html>
